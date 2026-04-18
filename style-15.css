@@ -1,0 +1,140 @@
+/* === GitHub invitation layout === */
+
+:root {
+  --bg: #ffffff;
+  --ink: #1d1d1d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.invitation-stage {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #ffffff;
+}
+
+.invitation-card {
+  position: relative;
+  width: min(100vw, 900px);
+}
+
+.invitation-image {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* === Venue icon (stigma) δίπλα στο ΚΤΗΜΑ ΚΛΕΟΠΑΤΡΑ, ΚΟΡΩΠΙ === */
+
+.venue-icon-link {
+  position: absolute;
+  top: 58.1%;
+  left: 55.5%;
+  width: 3.5%;
+  min-width: 17px;
+  max-width: 30px;
+  transform: translate(-50%, -50%);
+  opacity: 0.95;
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.venue-icon-link:hover,
+.venue-icon-link:focus-visible {
+  transform: translate(-50%, -50%) scale(1.08);
+  opacity: 1;
+  outline: none;
+}
+
+.venue-icon {
+  width: 100%;
+  height: auto;
+}
+
+/* === RSVP icon δίπλα στο "rsvp" της εικόνας === */
+
+.rsvp-inline {
+  position: absolute;
+  top: 78.6%;
+  left: 39%;
+  width: 3.9%;
+  min-width: 18px;
+  max-width: 28px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rsvp-label {
+  font-family: "WindSong", cursive;
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
+  line-height: 1;
+  color: var(--ink);
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.rsvp-icon-link {
+  width: 100%;
+  opacity: 0.95;
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.rsvp-icon-link:hover,
+.rsvp-icon-link:focus-visible {
+  transform: scale(1.08);
+  opacity: 1;
+  outline: none;
+}
+
+.rsvp-icon {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .venue-icon-link {
+    width: 4.8%;
+  }
+
+  .rsvp-inline {
+    width: 5.8%;
+  }
+}
+
+@media (max-width: 480px) {
+  .venue-icon-link {
+    width: 5.6%;
+    min-width: 16px;
+  }
+
+  .rsvp-inline {
+    width: 6.4%;
+    min-width: 17px;
+  }
+}
